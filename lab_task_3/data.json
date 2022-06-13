@@ -1,0 +1,35 @@
+[
+    {
+        "firstname": "Alamin",
+        "lastname": "Sheikh",
+        "username": "alamin",
+        "gender": "male",
+        "email": "alamin@gmail.com",
+        "password": "123456",
+        "mobileno": "0123654789",
+        "address1": "AIUB",
+        "country": "bd"
+    },
+    {
+        "firstname": "sheikh",
+        "lastname": "alamin",
+        "username": "sheikh",
+        "gender": "male",
+        "email": "sheikh@gmail.com",
+        "password": "123456",
+        "mobileno": "0123654789",
+        "address1": "AIUB",
+        "country": "usa"
+    },
+    {
+        "firstname": "Nafiz",
+        "lastname": "ahmed",
+        "username": "nafiz",
+        "gender": "male",
+        "email": "nafiz@gmail.com",
+        "password": "123456",
+        "mobileno": "0123654789",
+        "address1": "AIUB",
+        "country": "bd"
+    }
+]
