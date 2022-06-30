@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "assets/images/12.jpg",
+    "title": "Tailored Jeans",
+    "price": "200",
+    "desc": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+  },
+  {
+    "id": 1,
+    "image": "assets/images/15.jpg",
+    "title": "Tailored Jeans",
+    "price": "200",
+    "desc": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+  },
+  {
+    "id": 1,
+    "image": "assets/images/15.jpg",
+    "title": "Tailored Jeans",
+    "price": "200",
+    "desc": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+  },
+  {
+    "id": 1,
+    "image": "assets/images/15.jpg",
+    "title": "Tailored Jeans",
+    "price": "200",
+    "desc": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+  }
+]
