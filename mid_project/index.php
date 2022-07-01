@@ -13,6 +13,5 @@
 
 <?php include "./view/partials/card.php";?>
 
-<?php include "./view/partials/footer.php";?>
 </body>
 </html>

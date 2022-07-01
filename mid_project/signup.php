@@ -143,10 +143,10 @@ if(isset($_POST['submit'] ) ){
 		</fieldset>
 
 		
-		<input type="submit" name="submit" value="Register">
+		<input style="margin-top:10px" type="submit" name="submit" value="Register">
 	</form>
 
 </div>
-
+<?php include "view/partials/footer.php"?>
 </body>
 </html>

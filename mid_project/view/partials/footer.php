@@ -4,7 +4,7 @@
   padding: 3px;
   background-color: DarkSalmon;
   color: white;
-  margin-top: 100%;
+  margin-top: 20px;
 }
 </style>
 <footer>

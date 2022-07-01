@@ -1,7 +1,7 @@
 
 <div class="topnav">
-  <a class="#home" href="./index.php">LOGO HERE</a>
-  <a class="active" href="./index.php">Home</a>
+  <a class="active" href="./index.php">LOGO HERE</a>
+  <a  href="./index.php">Home</a>
 
   <?php 
 

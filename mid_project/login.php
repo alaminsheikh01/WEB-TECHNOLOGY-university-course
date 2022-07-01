@@ -41,9 +41,10 @@
 		</fieldset>
 
 		
-		<input type="submit" name="submit" value="Login">
+		<input style="margin-top:10px" type="submit" name="submit" value="Login">
 	</form>
 
   </div>
+  <?php include "view/partials/footer.php"?>
  </body>
 </html>
