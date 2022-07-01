@@ -19,8 +19,6 @@
 </style>
 
       <body>
-    
-    
   <div class="form-custom">
   <form method="post" action="./controller/admin/LoginAction.php" novalidate>
 		<fieldset>
@@ -29,18 +27,15 @@
             <label for="Uname">UserName</label>
 			<input type="text" name="username" id="Uname" required>
 		
-
 			<br><br>
 
             <label for="password">Password</label>
 			<input type="password" name="password" id="password" required>
 
-
 			<br><br>
 
 		</fieldset>
 
-		
 		<input style="margin-top:10px" type="submit" name="submit" value="Login">
 	</form>
 

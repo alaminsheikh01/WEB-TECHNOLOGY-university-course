@@ -1,20 +1,14 @@
 [
     {
-        "fullname": "",
-        "username": "",
-        "email": "",
-        "password": ""
+        "fullname": "alamin",
+        "username": "alaminsheikh",
+        "email": "alaminsheikh9745@gmail.com",
+        "password": "123654"
     },
     {
         "fullname": "testUser",
-        "username": "",
-        "email": "",
-        "password": ""
-    },
-    {
-        "fullname": "",
-        "username": "",
-        "email": "",
-        "password": ""
+        "username": "alamin__sheikh",
+        "email": "alaminsheikh30025@gmail.com",
+        "password": "456321"
     }
 ]

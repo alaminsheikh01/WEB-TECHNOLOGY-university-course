@@ -38,27 +38,11 @@ $email = test_input($_POST['email']);
 $message = "";
 
 if (empty($fullname)) {
-
     $fullnameErrMsg = "Name is Empty";
-}
-else {
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$fullname)) {
-    
-
-        $fullnameErrMsg = "Only letters and spaces";
-    }
 }
 
 if (empty($username)) {
-
     $userNameError = "UserName is Empty";
-}
-else {
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$username)) {
-    
-
-        $userNameError = "Only letters and spaces";
-    }
 }
 
 if (empty($email)) {
@@ -78,6 +62,7 @@ else {
     echo $message;
 }
 
+if(!$fullname == "" && !$username == "" && !$email =="" && !$password == "")  {
 if(isset($_POST['submit'] ) ){
 
     
@@ -106,10 +91,7 @@ if(isset($_POST['submit'] ) ){
     }
 }
 }
-
-
-
-
+}
 ?>
 
 <div class="form-custom">

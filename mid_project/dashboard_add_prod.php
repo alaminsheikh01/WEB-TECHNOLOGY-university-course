@@ -8,6 +8,8 @@
 <?php include "view/partials/_nav.php"?>
 <link href="style.css" rel="stylesheet">
 
+
+
 <div style="text-align:center">
 <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
 
@@ -19,9 +21,9 @@
 <?php 
 		include "view/admin/nav.php";
 		echo "<br>";
-		echo "<h2>View Added Products</h3>";
+		echo "<h2>Add Products</h3>";
 		echo "<br>";
-		include "controller/admin/viewProducts.php";
+		include "view/admin/create.php";
 ?>
 <?php include "view/partials/footer.php"?>
 </div>

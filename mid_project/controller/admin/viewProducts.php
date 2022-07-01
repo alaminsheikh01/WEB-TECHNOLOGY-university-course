@@ -15,7 +15,7 @@ $products = getProducts();
 ?>
 
 
-<div class="container">
+<div style="text-align:center">
     <table class="table" border="1">
         <thead>
         <tr>
