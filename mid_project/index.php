@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+?>
+
+
 <?php include "./view/partials/head.php";?>
 
 <link href="style.css" rel="stylesheet">

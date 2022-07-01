@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <?php include "./view/partials/_nav.php";?>
 <link href="style.css" rel="stylesheet">
 
