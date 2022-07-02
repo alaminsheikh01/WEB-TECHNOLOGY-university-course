@@ -1,10 +1,8 @@
 <section style="margin-left: 70px;">
     <h2>Book Category</h2>
-
-
     <?php
 
-    $json_data = file_get_contents("data/products.json");
+    $json_data = file_get_contents("./data/products_data.json");
     $products = json_decode($json_data, true);
 
     if(count($products) != 0) {
@@ -21,12 +19,9 @@
     </div>
     </div>
 </section>
-
             <?php
         }
     }
+?>
     
-    ?>
-    
-
 </section>
