@@ -2,7 +2,7 @@
 
 function getProducts()
 {
-    return json_decode(file_get_contents(__DIR__ . '/products.json'), true);
+    return json_decode(file_get_contents(__DIR__ .'../../../products.json'), true);
 }
 
 function getProductById($id)
@@ -60,7 +60,7 @@ function deleteProducts($id)
 
 function putJson($products)
 {
-    file_put_contents(__DIR__ . '/products.json', json_encode($products, JSON_PRETTY_PRINT));
+    file_put_contents(__DIR__ . '../../../products.json', json_encode($products, JSON_PRETTY_PRINT));
 }
 
 function validateProduct($product, &$errors)
