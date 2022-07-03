@@ -5,6 +5,7 @@
 		header("Location: login.php");
 	}
 ?>
+
 <?php include "view/partials/_nav.php"?>
 <link href="style.css" rel="stylesheet">
 

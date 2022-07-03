@@ -50,12 +50,6 @@ function putJson($products)
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 
-    $product = array_merge($product, $_POST);
-
-    if ($product) {
-        $product = createProduct($_POST);
-        header("Location:./controller/admin/viewProducts.php");
-    }
 
     function test_input($data) {
         $data = trim($data);
@@ -90,33 +84,12 @@ else {
 
 if(!$title == "" && !$desc == "" && !$price == "")
 {
-    // if(isset($_POST['submit'] ) ){
+$product = array_merge($product, $_POST);
 
-    
-    //     $new_message = array(
-    //         "title" => $_POST['title'],
-    //         "desc" => $_POST['desc'],
-    //         "price" => $_POST['price'],
-    //     );
-       
-    //     if(filesize('productAdded.json') == "" ){
-    //         $first_record = array($new_message);
-    //         $data_to_save = $first_record;
-    //     }else{
-           
-    //         $old_records = json_decode(file_get_contents('productAdded.json'));
-    //         array_push($old_records, $new_message);
-    
-    //         $data_to_save = $old_records;
-    //     }
-    
-    //     if(!file_put_contents('product_added.json', json_encode($data_to_save, JSON_PRETTY_PRINT), LOCK_EX)){
-    //         $error = "Error storing message, please try again";
-    //     }else{
-    //         $success = "Message is stored successfully";
-    //     }
-    // }
-    
+if ($product) {
+    $product = createProduct($_POST);
+    header("Location:./controller/admin/viewProducts.php");
+}
 }
 }
 

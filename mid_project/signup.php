@@ -1,5 +1,8 @@
 <?php 
 	session_start();
+    if (isset($_SESSION['username'])) {
+		header("Location: welcome.php");
+	}
 ?>
 
 <?php include "./view/partials/_nav.php";?>
@@ -18,7 +21,6 @@
 
 $fullname  = $username = $password =  $email =  "";
 $fullnameErrMsg = $userNameError = $passwordError= $emailErrMsg = "";
-
 
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -50,7 +52,7 @@ if (empty($email)) {
     
 }
 else {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErrMsg = "Please correct your email";
     }
 }
@@ -58,6 +60,7 @@ if (empty($password)) {
     $passwordError = "Password is Empty";
     
 }
+
 else {
     echo $message;
 }
@@ -89,7 +92,10 @@ if(isset($_POST['submit'] ) ){
     }else{
         $success = "Message is stored successfully";
     }
+   
 }
+header('Location:login.php');
+
 }
 }
 ?>
@@ -126,6 +132,7 @@ if(isset($_POST['submit'] ) ){
 
 		
 		<input style="margin-top:10px" type="submit" name="submit" value="Register">
+        <p>Already Signup? <a href='./login.php'> Login here </a></p>
 	</form>
 
 </div>

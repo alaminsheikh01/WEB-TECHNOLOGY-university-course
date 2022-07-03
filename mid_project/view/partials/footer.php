@@ -8,6 +8,6 @@
 }
 </style>
 <footer>
-  <p>Author: Alamin Sheikh<br>
-  <a href="mailto:hege@example.com">alamin@example.com</a></p>
+  <p>Author: team work<br>
+  <a href="mailto:team@example.com">team@example.com</a></p>
 </footer>

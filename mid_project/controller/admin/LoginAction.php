@@ -18,11 +18,11 @@
 
 		if ($username === "admin" and $password === "admin") {
 			$_SESSION['username'] = $username;
-			header("Location: ../../welcome.php");
+			header("Location:../../welcome.php");
 		}
 		else {
 			$_SESSION['error_msg'] = "Login failed!";
-			header("Location: ../../login.php");
+			header("Location:../../login.php");
 		}
 
 	?>
