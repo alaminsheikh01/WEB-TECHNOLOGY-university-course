@@ -33,19 +33,20 @@ function updateProduct($data, $id)
     $products = getProducts();
     foreach ($products as $i => $product) {
         if ($product['id'] == $id) {
-            $product[$i] = array_merge($product, $data);
+            $products[$i] = array_merge($product, $data);
         }
     }
 
-	putJson($products);
+	// putJson($products);
+    file_put_contents(__DIR__ . '../../../products.json', json_encode($products));
 	
-	return $updateProduct;
+	// return $updateProduct;
 
     
 }
-echo '<pre>';
-var_dump ($product);
-echo '</pre>';
+// echo '<pre>';
+// var_dump ($product);
+// echo '</pre>';
 
 function putJson($products)
 {
@@ -56,11 +57,15 @@ function putJson($products)
 $title  = $desc = $price =  "";
 $titleErrMsg = $descError = $priceError = "";
 
-
+  
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $product = array_merge($product, $_POST);
-   
-        $product = updateProduct($_POST, $productId);
+        // $product = array_merge($product, $_POST);
+       
+
+        updateProduct($_POST, $productId);
+        echo "<script>alert('updated')</script>";
+        header("Location: welcome.php");
+        
 
 		// validation
 

@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     if ($product) {
         $product = createProduct($_POST);
-        echo "done";
+        header("Location:./controller/admin/viewProducts.php");
     }
 
     function test_input($data) {

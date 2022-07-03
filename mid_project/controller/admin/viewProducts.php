@@ -1,4 +1,3 @@
-
 <?php 
 	if (! isset($_SESSION['username'])) {
 		header("Location: ../../login.php");
@@ -31,7 +30,7 @@ $products = getProducts();
                 <td><?php echo $product['price'] ?></td>
                
                 <td>
-                    <a href="view.php?id=<?php echo $product['id'] ?>">View</a>
+                    
                     <a href="dashboard_update_prod.php?id=<?php echo $product['id'] ?>"
                        class="btn btn-sm btn-outline-secondary">Update</a>
                     <form method="POST" action="delete.php">
