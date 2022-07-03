@@ -1,74 +1,74 @@
 [
-    {
-        "fullname": "alamin",
-        "username": "alaminsheikh",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123654"
-    },
-    {
-        "fullname": "testUser",
-        "username": "alamin__sheikh",
-        "email": "alaminsheikh30025@gmail.com",
-        "password": "456321"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "1213654"
-    },
-    {
-        "fullname": "alamin",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "sdfdsfsdf"
-    },
-    {
-        "fullname": "testUser",
-        "username": "alaminsheikh",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "12345"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123456"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123456"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123456"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123456"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123456"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123456"
-    },
-    {
-        "fullname": "testUser",
-        "username": "admin",
-        "email": "alaminsheikh9745@gmail.com",
-        "password": "123654"
-    }
+  {
+    "fullname": "alamin",
+    "username": "alaminsheikh",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123654"
+  },
+  {
+    "fullname": "testUser",
+    "username": "alamin__sheikh",
+    "email": "alaminsheikh30025@gmail.com",
+    "password": "456321"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "1213654"
+  },
+  {
+    "fullname": "alamin",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "sdfdsfsdf"
+  },
+  {
+    "fullname": "testUser",
+    "username": "alaminsheikh",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "12345"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123456"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123456"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123456"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123456"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123456"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123456"
+  },
+  {
+    "fullname": "testUser",
+    "username": "admin",
+    "email": "alaminsheikh9745@gmail.com",
+    "password": "123654"
+  }
 ]

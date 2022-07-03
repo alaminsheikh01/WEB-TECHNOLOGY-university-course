@@ -16,7 +16,6 @@ function getProducts()
 {
     return json_decode(file_get_contents(__DIR__ . '../../../products.json'), true);
 }
-// var_dump(getProducts());
 
 function getProductById($id)
 {

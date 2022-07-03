@@ -1,8 +1,8 @@
 <?php 
 	session_start();
 
-	if (!isset($_SESSION['username'])) {
-		header("Location: signup.php");
+	if (! isset($_SESSION['username'])) {
+		header("Location: login.php");
 	}
 ?>
 <?php include "view/partials/_nav.php"?>
