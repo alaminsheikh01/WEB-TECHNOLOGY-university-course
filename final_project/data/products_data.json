@@ -1,0 +1,44 @@
+[
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/11.jpg"
+  },
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/11.jpg"
+  },
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/11.jpg"
+  },
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/14.jpg"
+  },
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/11.jpg"
+  },
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/16.jpg"
+  },
+  {
+    "title": "demo product",
+    "price": 100,
+    "desc": "this is first product to my country ever we have reached out",
+    "image": "./assets/images/18.jpg"
+  }
+]
