@@ -55,7 +55,7 @@ else {
 
       <body>
   <div class="form-custom">
-  <form method="post" action="./controller/admin/LoginAction.php" novalidate>
+  <form method="post" action="./controller/LoginAction.php" novalidate>
 		<fieldset>
 			<legend>Login</legend>
 

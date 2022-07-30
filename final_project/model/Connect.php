@@ -10,9 +10,9 @@
         
 		if (! $conn) {
 			die("There were some problem in database connection.");
-		}else{
-            echo "connection successfully";
-        }
+		}//else{
+        //     echo "connection successfully";
+        // }
         
 
 		return $conn;
