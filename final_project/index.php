@@ -14,7 +14,6 @@
 
 <?php require "./view/partials/banner.php";?>
 
-<?php include "./view/partials/card.php";?>
 
 </body>
 </html>
