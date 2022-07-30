@@ -19,9 +19,6 @@
 <?php 
 		include "view/admin/nav.php";
 		echo "<br>";
-		echo "<h2>View Added Products</h3>";
-		echo "<br>";
-		include "controller/admin/viewProducts.php";
 ?>
 <?php include "view/partials/footer.php"?>
 </div>

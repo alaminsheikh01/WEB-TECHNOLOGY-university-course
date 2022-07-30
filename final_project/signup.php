@@ -6,7 +6,7 @@
 ?>
 
 <?php include "./view/partials/_nav.php";?>
-<link href="style.css" rel="stylesheet">
+<link href="./style.css" rel="stylesheet">
 
 <style>
     .form-custom {
