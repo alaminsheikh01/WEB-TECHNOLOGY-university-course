@@ -24,6 +24,11 @@
 		<fieldset>
 			<legend>Login</legend>
 
+			<?php
+			if(isset($_SESSION['is_invalid'])): ?>
+			<em>Invalid login</em>
+			<?php endif;?>
+			<br>
             <label for="username">Username</label>
 			<input type="text" name="username" id="username" required>
 			<!-- <span style="color: red">*<?php echo $userNameError; ?></span> -->

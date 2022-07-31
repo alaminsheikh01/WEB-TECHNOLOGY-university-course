@@ -17,8 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 	// fetch data from the database and login user start
 
-	require '../model/Connect.php';
+require '../model/Connect.php';
 
+
+		$is_invalid = false;
+		$_SESSION["is_invalid"] = $is_invalid;
 		$conn = Connect();
 		
 		$sql = sprintf("SELECT * FROM users 
@@ -38,23 +41,21 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 				echo 'Invalid password!';
 			}
 		}
+
+		$is_invalid = true;
+		$_SESSION["is_invalid"] = $is_invalid;
+		header("Location:../login.php");
 	
 
 	// fetch data from the database and login user end
 
 
-
-
-// if ($username === "admin" and $password === "admin") {
-// 	$_SESSION['email'] = $username;
-// 	header("Location:../welcome.php");
+// if (empty($username)) {
+// 	die("Username is Empty");
 // }
-if (empty($username)) {
-	die("Username is Empty");
-}
-if (empty($username)) {
-	die("username is Empty");   
-}
+// if (empty($username)) {
+// 	die("username is Empty");   
+// }
 // else {
 // 	$_SESSION['error_msg'] = "Login failed!";
 // 	header("Location:../welcome.php");
