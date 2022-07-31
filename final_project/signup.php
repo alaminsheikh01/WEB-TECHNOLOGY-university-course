@@ -27,10 +27,10 @@
 			<input type="text" name="fullname" id="fname" >
 			<!-- <span style="color: red">*<?php echo $fullnameErrMsg; ?></span> -->
 
-			<br><br>
+			<!-- <br><br>
 
             <label for="Uname">UserName</label><br>
-			<input type="text" name="username" id="Uname">
+			<input type="text" name="username" id="Uname"> -->
 			<!-- <span style="color: red">*<?php echo $userNameError; ?></span> -->
 
 			<br><br>

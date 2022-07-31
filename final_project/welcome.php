@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 
-	if (! isset($_SESSION['username'])) {
+	if (! isset($_SESSION['name'])) {
 		header("Location: login.php");
 	}
 ?>
@@ -9,7 +9,7 @@
 <link href="style.css" rel="stylesheet">
 
 <div style="text-align:center">
-<h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+<h1>Welcome, <?php echo $_SESSION['name']; ?></h1>
 
 </div>
 <br><br>

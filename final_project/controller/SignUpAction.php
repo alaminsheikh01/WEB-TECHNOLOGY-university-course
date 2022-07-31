@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 
 $fullname = test_input($_POST['fullname']);
-$username = test_input($_POST['username']);
 $email = test_input($_POST['email']);
 $password = test_input($_POST['password']);
 $confirmPass = test_input($_POST['confirmPassword']);
@@ -20,9 +19,6 @@ if (empty($fullname)) {
     die( "Name is Empty");
 }
 
-if (empty($username)) {
-    die("UserName is Empty");
-}
 
 if (empty($email)) {
     die("Email is Empty");
@@ -52,8 +48,8 @@ require '../model/Connect.php';
 $conn = connect();
 // insert data into the database 
 
-$sql = "INSERT INTO users (fullname, username, email, password)
-        VALUES (?,?,?,?)";
+$sql = "INSERT INTO users (fullname, email, password)
+        VALUES (?,?,?)";
 
 $stmt = $conn->stmt_init();
 
@@ -61,11 +57,15 @@ if( ! $stmt->prepare($sql)){
     die("SQL error" . $conn->error);
 }
 
-$stmt->bind_param("ssss", $fullname, $username, $email, $password);
+$stmt->bind_param("sss", $fullname, $email, $password);
 
-$stmt->execute();
+if($stmt->execute()) {
+    echo "SignUp successfully";
+}else{
+    
+    die($conn->error);
+}
 
-echo "SignUp successfully";
-
+header("Location: ../login.php")
 
 ?>
