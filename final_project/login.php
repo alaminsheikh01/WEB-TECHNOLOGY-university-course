@@ -5,9 +5,18 @@
 		header("Location: welcome.php");
 	}
 ?>
-
 <?php include "./view/partials/_nav.php";?>
-<link href="style.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="./view/js/login_validation.js"></script>
+</head>
+<body>
+
 
 <style>
     .form-custom {
@@ -17,27 +26,28 @@
   
 }
 </style>
-
+<!-- ./controller/LoginAction.php -->
       <body>
   <div class="form-custom">
-  <form method="post" action="./controller/LoginAction.php" novalidate>
+  <form method="post" action="./controller/LoginAction.php" novalidate onsubmit="return validate(this)";>
 		<fieldset>
+			<?php 
+			if(isset($_SESSION['msg']) and !empty($_SESSION['msg'])) {
+				echo $_SESSION['msg'];
+				echo "<br><br>";
+			}
+			
+			?>
 			<legend>Login</legend>
-
-			<?php
-			if(isset($_SESSION['is_invalid'])): ?>
-			<em>Invalid login</em>
-			<?php endif;?>
-			<br>
             <label for="username">Username</label>
 			<input type="text" name="username" id="username" required>
-			<!-- <span style="color: red">*<?php echo $userNameError; ?></span> -->
+			<span style="color: red" id="unameErr"></span>
 		
 			<br><br>
 
             <label for="password">Password</label>
 			<input type="password" name="password" id="password" required>
-			<!-- <span style="color: red">*<?php echo $passwordError; ?></span> -->
+			<span style="color: red" id="passwordErr"></span>
 
 			<br><br>
 

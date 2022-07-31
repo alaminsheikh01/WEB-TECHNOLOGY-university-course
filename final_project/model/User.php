@@ -1,6 +1,32 @@
 <?php
 require 'Connect.php';
+require "../view/js/login_validation.js";
 
+function validate($username, $password) {
+    $conn = connect();
+    if ($conn) {
+
+        $sql = "SELECT id FROM users WHERE username = '" . $username . "' and password = '" . $password . "'";
+
+        $res = mysqli_query($conn, $sql);
+
+        if ($res->num_rows === 1)
+            return true;
+        return false;
+    }
+}	
+
+function getUser($username) {
+    $conn = Connect();
+		
+			$sql = sprintf("SELECT * FROM users 
+							WHERE username = '%s'",
+							$conn->real_escape_string($username));
+							
+			$result = $conn->query($sql);
+			$user = $result->fetch_assoc();
+            return $user;
+}
 
 
 function getAll() {

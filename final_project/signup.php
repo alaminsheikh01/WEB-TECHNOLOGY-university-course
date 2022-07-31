@@ -3,6 +3,7 @@
     if (isset($_SESSION['username'])) {
 		header("Location: welcome.php");
 	}
+	$_SESSION["is_invalid"] = "";
 ?>
 
 <?php include "./view/partials/_nav.php";?>
