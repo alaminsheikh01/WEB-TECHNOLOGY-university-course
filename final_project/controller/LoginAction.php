@@ -12,49 +12,52 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         return $data;
     }
 
-	$email = test_input($_POST['email']);
+	$username = test_input($_POST['username']);
 	$password = test_input($_POST['password']);
 
 	// fetch data from the database and login user start
 
 	require '../model/Connect.php';
-	if(!empty($email)){
+
 		$conn = Connect();
 		
 		$sql = sprintf("SELECT * FROM users 
-						WHERE email = '%s'",
-						$conn->real_escape_string($email));
+						WHERE username = '%s'",
+						$conn->real_escape_string($username));
 						
 		$result = $conn->query($sql);
 		$user = $result->fetch_assoc();
 		
 		if($user){
-			if(password_verify($password, $user["password"])){
-				die("Login successful");
-				// $_SESSION['name'] = $user['fullname'];
+			
+			if ($password === $user["password"]){
+				echo "Login successfully";
+				$_SESSION["username"] = $user["username"];
 				header("Location:../welcome.php");
+			}else {
+				echo 'Invalid password!';
 			}
 		}
-	}
+	
 
 	// fetch data from the database and login user end
 
 
 
 
-// if ($email === "admin@gmail.com" and $password === "admin") {
-	// $_SESSION['email'] = $email;
-	// header("Location:../welcome.php");
+// if ($username === "admin" and $password === "admin") {
+// 	$_SESSION['email'] = $username;
+// 	header("Location:../welcome.php");
 // }
-if (empty($email)) {
-	die("email is Empty");
+if (empty($username)) {
+	die("Username is Empty");
 }
-if (empty($password)) {
-	die("Password is Empty");   
+if (empty($username)) {
+	die("username is Empty");   
 }
 // else {
 // 	$_SESSION['error_msg'] = "Login failed!";
-// 	header("Location:../login.php");
+// 	header("Location:../welcome.php");
 // }
 }
 

@@ -24,8 +24,8 @@
 		<fieldset>
 			<legend>Login</legend>
 
-            <label for="email">Email</label>
-			<input type="text" name="email" id="email" required>
+            <label for="username">Username</label>
+			<input type="text" name="username" id="username" required>
 			<!-- <span style="color: red">*<?php echo $userNameError; ?></span> -->
 		
 			<br><br>

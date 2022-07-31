@@ -23,8 +23,8 @@
 		<fieldset >
 			<legend>SignUp</legend>
 
-			<label for="fname">FullName</label><br>
-			<input type="text" name="fullname" id="fname" >
+			<label for="Uname">Username</label><br>
+			<input type="text" name="username" id="username" >
 			<!-- <span style="color: red">*<?php echo $fullnameErrMsg; ?></span> -->
 
 			<!-- <br><br>
