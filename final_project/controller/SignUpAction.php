@@ -1,5 +1,8 @@
 <?php
 
+require "../model/User.php";
+
+
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     function test_input($data) {
@@ -12,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 $username = test_input($_POST['username']);
 $email = test_input($_POST['email']);
 $password = test_input($_POST['password']);
-$confirmPass = test_input($_POST['confirmPassword']);
 
 
 if (empty($username)) {
@@ -29,44 +31,26 @@ else {
         die("Please correct your email");
     }
 }
-if (strlen($password) <= 8) {
-    die("Password must be at least 8 characters");   
-}
-
-if(! preg_match("/[a-z]/i", $password)){
-    die("password must contain at least one letter");
-}
-if(! preg_match("/[0-9]/i", $password)){
-    die("password must contain at least one number");
+if (strlen($password) <= 6) {
+    die("Password must be at least 6 characters");   
 }
 
 }
 
-// $mysqli = require __DIR__ . "./Connect.php"
-require '../model/Connect.php';
+// validate($username, $email, $password);
+insertUser($username, $email, $password);
 
-$conn = connect();
-// insert data into the database 
+header("Location: ../login.php");
 
-$sql = "INSERT INTO users (username, email, password)
-        VALUES (?,?,?)";
+// if ($isValid) {
+				
+//     if($user){
 
-$stmt = $conn->stmt_init();
-
-if( ! $stmt->prepare($sql)){
-    die("SQL error" . $conn->error);
-}
-
-$stmt->bind_param("sss", $username, $email, $password);
-
-
-if($stmt->execute()) {
-    echo "SignUp successfully";
-}else{
-    
-    die($conn->error);
-}
-
-header("Location: ../login.php")
+//         header("Location:../login.php");
+//     }
+// }
+// else {
+//     header("Location: ../signup.php");
+// }
 
 ?>

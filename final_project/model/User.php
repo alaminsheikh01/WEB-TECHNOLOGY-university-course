@@ -16,6 +16,7 @@ function validate($username, $password) {
     }
 }	
 
+
 function getUser($username) {
     $conn = Connect();
 		
@@ -29,26 +30,49 @@ function getUser($username) {
 }
 
 
-function getAll() {
-    $conn = connect();
-    if ($conn) {
+function insertUser($username, $email, $password){
+    
+$conn = connect();
+// insert data into the database 
 
-        $sql = "SELECT id, username, password, email FROM users";
+$sql = "INSERT INTO users (username, email, password)
+        VALUES (?,?,?)";
 
-        $res = mysqli_query($conn, $sql);
+$stmt = $conn->stmt_init();
 
-        $users = array();
-
-        if ($res->num_rows > 0) {
-
-            while($row = $res->fetch_assoc()) {
-                array_push($users, $row);
-            }
-
-            return $users;
-        }
-    }
-
-    return array();
+if( ! $stmt->prepare($sql)){
+    die("SQL error" . $conn->error);
 }
+
+$stmt->bind_param("sss", $username, $email, $password);
+
+
+if($stmt->execute()) {
+    echo "SignUp successfully";
+}
+
+}
+
+// function getAll() {
+//     $conn = connect();
+//     if ($conn) {
+
+//         $sql = "SELECT id, username, password, email FROM users";
+
+//         $res = mysqli_query($conn, $sql);
+
+//         $users = array();
+
+//         if ($res->num_rows > 0) {
+
+//             while($row = $res->fetch_assoc()) {
+//                 array_push($users, $row);
+//             }
+
+//             return $users;
+//         }
+//     }
+
+//     return array();
+// }
 ?>
