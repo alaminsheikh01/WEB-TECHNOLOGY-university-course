@@ -5,7 +5,7 @@
 		header("Location: login.php");
 	}
 ?>
-<?php include "view/partials/_nav.php"?>
+<?php include "./partials/_nav.php"?>
 <link href="style.css" rel="stylesheet">
 
 <div style="text-align:center">
@@ -17,10 +17,10 @@
 <div style="text-align:center">
 	
 <?php 
-		include "view/admin/nav.php";
+		include "./nav.php";
 		echo "<br>";
 ?>
-<?php include "view/partials/footer.php"?>
+<?php include "./partials/footer.php"?>
 </div>
 </body>
 </html>

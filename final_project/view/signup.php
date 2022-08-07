@@ -7,9 +7,9 @@
 	// $_SESSION["is_invalid"] = "";
 ?>
 
-<?php include "./view/partials/_nav.php";?>
+<?php include "./partials/_nav.php";?>
 <link href="./style.css" rel="stylesheet">
-<script src="./view/js/login_validation.js"></script>
+<script src="./js/login_validation.js"></script>
 <style>
     .form-custom {
   margin-left: 20%;
@@ -20,7 +20,7 @@
 </style>
 
 <div class="form-custom" >
-<form method="post" action="./controller/SignUpAction.php" novalidate onsubmit="return validate(this)"; >
+<form method="post" action="../controller/SignUpAction.php" novalidate onsubmit="return validate(this)"; >
 		<fieldset >
 			<legend>SignUp</legend>
 
@@ -55,6 +55,6 @@
 	</form>
 
 </div>
-<?php include "view/partials/footer.php"?>
+<?php include "./partials/footer.php"?>
 </body>
 </html>

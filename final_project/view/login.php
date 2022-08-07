@@ -5,7 +5,7 @@
 		header("Location: welcome.php");
 	}
 ?>
-<?php include "./view/partials/_nav.php";?>
+<?php include "./partials/_nav.php";?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
     <link href="style.css" rel="stylesheet">
-    <script src="./view/js/login_validation.js"></script>
+    <script src="./js/login_validation.js"></script>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
 <!-- ./controller/LoginAction.php -->
       <body>
   <div class="form-custom">
-  <form method="post" action="./controller/LoginAction.php" novalidate onsubmit="return validate(this)";>
+  <form method="post" action="../controller/LoginAction.php" novalidate onsubmit="return validate(this)";>
 		<fieldset>
 			<?php 
 			if(isset($_SESSION['msg']) and !empty($_SESSION['msg'])) {
@@ -58,6 +58,6 @@
 	</form>
 
   </div>
-  <?php include "view/partials/footer.php"?>
+  <?php include "./partials/footer.php"?>
  </body>
 </html>

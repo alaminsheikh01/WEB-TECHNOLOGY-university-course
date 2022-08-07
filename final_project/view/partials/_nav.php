@@ -12,14 +12,11 @@ if (!isset($_SESSION['username'])) {
   
 }else{
   echo '<a href="./welcome.php">Dashboard</a>';
-  echo '<a href="./view/partials/logout.php">Logout</a>';
+  echo '<a href="./partials/logout.php">Logout</a>';
   
 }
 ?>
  
-
-  <!-- <a href="#contact">Contact</a>
-  <a href="#about">About</a> -->
 </div>
 
 </body>

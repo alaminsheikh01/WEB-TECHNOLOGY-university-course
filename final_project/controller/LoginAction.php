@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 		if (empty($username) or empty($password)) {
 			$_SESSION['msg'] = "Please fill up the form properly username and password";
-			header("Location: ../login.php");
+			header("Location: ../view/login.php");
 		}	
 		else {
 			
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 					if ($password === $user["password"]){
 						$_SESSION["username"] = $user["username"];
 						$_SESSION['msg'] = "";
-						header("Location:../welcome.php");
+						header("Location:../view/welcome.php");
 					}else {
 						echo 'Invalid password!';
 					}
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 			}
 			else {
 				$_SESSION['msg'] = "Please check your username and password"; 
-				header("Location: ../login.php");
+				header("Location: ../view/login.php");
 			}
 		}
 
@@ -78,7 +78,7 @@ if (empty($username)) {
 }
 else {
 	$_SESSION['error_msg'] = "Login failed!";
-	header("Location:../welcome.php");
+	header("Location:../view/welcome.php");
 }
 }
 
