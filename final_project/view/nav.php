@@ -1,7 +1,7 @@
 
 
 <nav style='margin-left:10px'>
-    <a href='./welcome.php'>Manage customer</a> |
+    <a href='./showCustomer.php'>Manage customer</a> |
     <a href='./welcome.php'>Manage products</a> |
     <a href='./welcome.php'>Manage reseller</a> |
     <a href='./welcome.php'>Manage order</a> |

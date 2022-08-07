@@ -14,8 +14,7 @@
 </div>
 <br><br>
 
-<div style="text-align:center">
-	
+<div style="text-align:center">	
 <?php 
 		include "./nav.php";
 		echo "<br>";

@@ -49,26 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 			}
 		}
 
-	// fetch data from the database and login user start
-
-
-
-
-		// $is_invalid = false;
-		// $_SESSION["is_invalid"] = $is_invalid;
-
-
-		
-
-
-		// $is_invalid = true;
-		// $_SESSION["is_invalid"] = $is_invalid;
-		// header("Location:../login.php");
-		
-	
-
-	// fetch data from the database and login user end
-
 
 if (empty($username)) {
 	die("Username is Empty");
