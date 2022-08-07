@@ -36,6 +36,7 @@
 				echo $_SESSION['msg'];
 				echo "<br><br>";
 			}
+			$_SESSION['msg'] = "";
 			
 			?>
 			<legend>Login</legend>

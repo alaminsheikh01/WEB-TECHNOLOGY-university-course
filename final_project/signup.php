@@ -1,14 +1,15 @@
 <?php 
 	session_start();
+	
     if (isset($_SESSION['username'])) {
 		header("Location: welcome.php");
 	}
-	$_SESSION["is_invalid"] = "";
+	// $_SESSION["is_invalid"] = "";
 ?>
 
 <?php include "./view/partials/_nav.php";?>
 <link href="./style.css" rel="stylesheet">
-<!-- <script src="./view/js/login_validation.js"></script> -->
+<script src="./view/js/login_validation.js"></script>
 <style>
     .form-custom {
   margin-left: 20%;
@@ -22,6 +23,15 @@
 <form method="post" action="./controller/SignUpAction.php" novalidate onsubmit="return validate(this)"; >
 		<fieldset >
 			<legend>SignUp</legend>
+
+			<?php 
+			if(isset($_SESSION['msg']) and !empty($_SESSION['msg'])) {
+				echo $_SESSION['msg'];
+				echo "<br><br>";
+			}
+			$_SESSION['msg'] = "";
+			
+			?>
 
 			<label for="Uname">Username</label><br>
 			<input type="text" name="username" id="username" >

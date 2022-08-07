@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 	$_SESSION['msg'] = "";
 
 		if (empty($username) or empty($password)) {
-			$_SESSION['msg'] = "Please fill up the form properly";
+			$_SESSION['msg'] = "Please fill up the form properly username and password";
 			header("Location: ../login.php");
 		}	
 		else {

@@ -1,4 +1,5 @@
 <?php
+session_start(); 
 
 require "../model/User.php";
 
@@ -15,42 +16,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 $username = test_input($_POST['username']);
 $email = test_input($_POST['email']);
 $password = test_input($_POST['password']);
+$_SESSION['msg'] = "";
 
-
-if (empty($username)) {
-    die( "username is Empty");
+if (empty($username) or empty($email) or empty($password)) {
+    $_SESSION['msg'] = "Please fill up the form properly username, email and password";
+    header("Location: ../signup.php");
 }
-
-
-if (empty($email)) {
-    die("Email is Empty");
-    
-}
-else {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Please correct your email");
+else{
+    $user = insertUser($username, $email, $password);
+    if($user){
+        header("Location: ../login.php");
     }
 }
-if (strlen($password) <= 6) {
-    die("Password must be at least 6 characters");   
 }
-
-}
-
-// validate($username, $email, $password);
-insertUser($username, $email, $password);
-
-header("Location: ../login.php");
-
-// if ($isValid) {
-				
-//     if($user){
-
-//         header("Location:../login.php");
-//     }
-// }
-// else {
-//     header("Location: ../signup.php");
-// }
-
 ?>
