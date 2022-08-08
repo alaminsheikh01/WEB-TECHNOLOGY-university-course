@@ -36,7 +36,7 @@
 <!-- write your code here  -->
 
 <h2>List of Customer </h2>
-<a href="/createCustomer.php" role="button">New Customer</a>
+<a href="./createCustomer.php" role="button">New Customer</a>
 <br>
 
 <table border="2">
@@ -52,10 +52,20 @@
 	</thead>
 	<tbody>
 
-	<?php
+<?php
 
-$customer = getCustomer();
-echo "
+$conn = connect();
+if ($conn) {
+	// read all row from database table
+	$sql = "SELECT * FROM customer";
+	$result = $conn->query($sql);
+
+	if(!$result){
+		die("Invalid query: " . $conn->error);
+	}
+	// read data of each row
+	while($customer = $result->fetch_assoc()){
+		echo "
   <tr>
 	<td>$customer[id]</td>
 	<td>$customer[name]</td>
@@ -63,11 +73,14 @@ echo "
 	<td>$customer[phone]</td>
 	<td>$customer[address]</td>
 	<td>
-	<a href='./createCustomer.php?id=$customer[id]'>Edit</a>
-	<a href='./welcome.php?id=$customer[id]'>Delete</a>
+	<a href='./editCustomer.php?id=$customer[id]'>Edit</a>
+	<a href='./deleteCustomer.php?id=$customer[id]'>Delete</a>
 	</td>
   </tr>
-"
+";
+	}
+}
+
 ?>
 
 	</tbody>

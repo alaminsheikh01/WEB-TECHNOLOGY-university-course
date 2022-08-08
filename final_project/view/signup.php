@@ -9,7 +9,7 @@
 
 <?php include "./partials/_nav.php";?>
 <link href="./style.css" rel="stylesheet">
-<script src="./js/login_validation.js"></script>
+<script src="./js/signup_validation.js"></script>
 <style>
     .form-custom {
   margin-left: 20%;

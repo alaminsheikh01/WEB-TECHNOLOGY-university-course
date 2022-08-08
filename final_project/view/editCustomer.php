@@ -7,6 +7,7 @@
 ?>
 <?php include "./partials/_nav.php"?>
 
+
 <?php
 $name = "";
 $email = "";
@@ -15,26 +16,49 @@ $address = "";
 
 $errorMessage = "";
 $successMessage = "";
+$conn = connect();
 
-if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
+    // GET method: show the data of the customer
+    if(!isset($_GET['id'])) {
+        header("location: ./welcome.php");
+    }
+    $id = $_GET['id'];
+
+    
+    // read the row of the selected customer from database table
+    $sql = "SELECT * FROM customer WHERE id=$id";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    
+    if(!$row){
+        header("location: ./welcome.php");
+        exit;
+    }
+
+    $name = $row["name"];
+    $email = $row["email"];
+    $phone = $row["phone"];
+    $address = $row["address"];
+}
+else{
+    // POST method: Update the data of the Customer
+    $id= $_POST['id'];
     $name = $_POST["name"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $address = $_POST["address"];
 
-
     do{
-        if(empty($name) || empty($email) || empty($phone) || empty($address)) {
+        if(empty($id) || empty($name) || empty($email) || empty($phone) || empty($address)){
             $errorMessage = "All the fields are required";
             break;
         }
 
-        // add new customer to database
-        $conn = connect();
+        $sql = "UPDATE customer " . 
+                "SET name = '$name', email = '$email', phone= '$phone', address= '$address' " . 
+                "WHERE id = $id";
 
-        $sql = "INSERT INTO customer (name, email, phone, address) " . 
-                "VALUES ('$name', '$email', '$phone', '$address')";
-        
         $result = $conn->query($sql);
         
         if(!$result){
@@ -42,22 +66,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
             break;
         }
 
+        $successMessage = "Customer updated correctly";
 
-        $name = "";
-        $email = "";
-        $phone ="";
-        $address = "";
-
-        $successMessage = "Customer added correctly";
         header("location: ./showCustomer.php");
-        exit;
-
-
-    }while (false);
+    }while(false);
+    
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +101,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
     <?php if(!empty($errorMessage)){ echo $errorMessage;} ?>
     <?php if(!empty($successMessage)) {echo $successMessage;} ?>
 
-    <form method="post"  novalidate>
+    <form method="post" novalidate>
+        <input type="hidden" name="id" value="<?php echo $id;?>">
         <div>
             <label for="name">Name</label>
             <input type="text" name="name" value="<?php echo $name; ?>">

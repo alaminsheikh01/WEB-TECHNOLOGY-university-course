@@ -2,19 +2,6 @@
 require 'Connect.php';
 
 
-function addcustomer1($name, $email, $phone, $address){
-    $conn = connect();
-
-    $sql = "INSERT INTO customer (name, email, phone, address) " . 
-            "VALUES ('$name', '$email', '$phone', '$address')";
-    
-    $result1 = $conn->query($sql);
-    
-    if(!$result1){
-        $errorMessage = "Invalid query: " . $conn->error;
-    }
-}
-
 function getCustomer(){
     $conn = connect();
     if ($conn) {
