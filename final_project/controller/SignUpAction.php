@@ -20,13 +20,12 @@ $_SESSION['msg'] = "";
 
 if (empty($username) or empty($email) or empty($password)) {
     $_SESSION['msg'] = "Please fill up the form properly username, email and password";
-    header("Location: ../signup.php");
+    header("Location: ../view/signup.php");
 }
 else{
-    $user = insertUser($username, $email, $password);
-    if($user){
-        header("Location: ../login.php");
-    }
+    insertUser($username, $email, $password);
+    header("Location: ../view/login.php");
+    
 }
 }
 ?>
