@@ -37,7 +37,7 @@
 
 <h2>List of Customer </h2>
 <a href="./createCustomer.php" role="button">New Customer</a>
-<br>
+<br><br><br>
 
 <table border="2">
 	<thead>

@@ -107,24 +107,27 @@ else{
             <label for="name">Name</label>
             <input type="text" name="name" value="<?php echo $name; ?>">
         </div>
+        <br><br>
         <div>
             <label for="email">Email</label>
             <input type="text" name="email" value="<?php echo $email; ?>">
         </div>
+        <br><br>
         <div>
             <label for="phone">Phone</label>
             <input type="text" name="phone" value="<?php echo $phone; ?>">
         </div>
+        <br><br>
         <div>
             <label for="address">Address</label>
             <input type="text" name="address" value="<?php echo $address; ?>">
         </div>
 
-        
+        <br><br>
         
         <button type="submit">Submit</button>
         
-        <a href="#">Cancel</a>
+        <a href="./showCustomer.php">Cancel</a>
         
     </form>
     <?php include "./partials/footer.php"?>      
