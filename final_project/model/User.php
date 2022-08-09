@@ -1,21 +1,5 @@
 <?php
 require 'Connect.php';
-require "../view/js/login_validation.js";
-
-function validate($username, $password) {
-    $conn = connect();
-    if ($conn) {
-
-        $sql = "SELECT id FROM users WHERE username = '" . $username . "' and password = '" . $password . "'";
-
-        $res = mysqli_query($conn, $sql);
-
-        if ($res->num_rows === 1)
-            return true;
-        return false;
-    }
-}	
-
 
 function getUser($username) {
     $conn = connect();
@@ -29,6 +13,11 @@ function getUser($username) {
             return $user;
 }
 
+function CheckUser($logusername,$logemail)
+{
+$result = $conn->query("SELECT * FROM users WHERE username='". $logusername."' AND password='". $logemail."'");
+return $result;
+}
 
 function insertUser($username, $email, $password){
     

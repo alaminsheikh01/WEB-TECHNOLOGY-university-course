@@ -28,9 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 			
 			$user = getUser($username);
 
-			$isValid = validate($username, $password);
-
-			if ($isValid) {
 				
 				if($user){
 			
@@ -42,11 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 						echo 'Invalid password!';
 					}
 				}
+				else {
+					$_SESSION['msg'] = "Please check your username and password"; 
+					header("Location: ../view/login.php");
+				}
 			}
-			else {
-				$_SESSION['msg'] = "Please check your username and password"; 
-				header("Location: ../view/login.php");
-			}
+		
 		}
 
 
@@ -59,7 +57,6 @@ if (empty($username)) {
 else {
 	$_SESSION['error_msg'] = "Login failed!";
 	header("Location:../view/welcome.php");
-}
 }
 
 ?>
