@@ -8,10 +8,22 @@
 
 <?php include "./partials/_nav.php"?>
 <link href="style.css" rel="stylesheet">
+<body style="background-color: <?php
+ if(isset($_SESSION['color'])){
+	echo $_SESSION['color'];
+ }else{
+	echo 'white';
+ }
 
+?>">
 <div style="text-align:center">
 <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
 </div>
+
+<form action="./colorChange.php" method="post">
+	<input type="text" name="color">
+	<input type="submit" name="change" value="changeColor">
+</form>
 <br><br>
 
 <div style="text-align:center">	

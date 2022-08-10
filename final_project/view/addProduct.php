@@ -44,6 +44,7 @@ $db = connect();
 <html>
 <head>
 <title>Image Upload</title>
+<script src="./js/product_valid.js"></script>
 <style type="text/css">
    #content{
    	width: 50%;
@@ -62,24 +63,36 @@ $db = connect();
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
+<div style="text-align:center">
+<h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+</div>
+<div style="text-align:center">	
+<?php 
+		include "./nav.php";
+		echo "<br>";
+?>
+</div>
 <div id="content">
-  <form method="POST" action="./addProduct.php" enctype="multipart/form-data">
+  <form method="POST" action="./addProduct.php" enctype="multipart/form-data" novalidate onsubmit="return validate(this)";>
   	<input type="hidden" name="size" value="1000000">
   	<div>
         <label for="image">Add images</label><br>
-  	  <input type="file" name="image">
+  	  <input type="file" name="image"><br>
+		<span style="color: red" id="imageErr"></span>
   	</div>
       <br><br>
 
       <div>
         <label for="Title">Title</label><br>
-  	  <input type="text" name="title">
+  	  <input type="text" name="title"><br>
+		<span style="color: red" id="titleErr"></span>
   	</div>
       <br><br>
 
       <div>
         <label for="price">Price</label><br>
-  	  <input type="number" name="price">
+  	  <input type="number" name="price"><br>
+		<span style="color: red" id="priceErr"></span>
   	</div>
       <br><br>
   	<div>
@@ -90,9 +103,10 @@ $db = connect();
       	rows="4" 
       	name="image_text" 
       	placeholder="Say something about this image..."></textarea>
+		  <span style="color: red" id="imageTextErr"></span>
   	</div>
   	<div>
-  		<button type="submit" name="upload">POST</button>
+  		<button type="submit" name="upload">Add Product</button>
   	</div>
   </form>
 </div>
