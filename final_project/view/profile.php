@@ -107,7 +107,7 @@ header("location: ./welcome.php");
         </div>
                     
                    
-        <button type="submit" name="submit" class="btn">Update Profile</button>
+        <!-- <button type="submit" name="submit" class="btn">Update Profile</button> -->
         </form>
        
     <?php include "./partials/footer.php"?> 
