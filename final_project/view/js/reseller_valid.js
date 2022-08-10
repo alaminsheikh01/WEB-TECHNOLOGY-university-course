@@ -14,7 +14,11 @@ function validate(pForm) {
     document.getElementById("phoneErr").innerHTML = "Please fill up the phone";
     isValid = "Not Valid";
   }
-
+  if (pForm.company.value === "") {
+    document.getElementById("companyErr").innerHTML =
+      "Please fill up the company";
+    isValid = "Not Valid";
+  }
   if (pForm.address.value === "") {
     document.getElementById("addressErr").innerHTML =
       "Please fill up the address";
