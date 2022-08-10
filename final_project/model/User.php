@@ -13,11 +13,6 @@ function getUser($username) {
             return $user;
 }
 
-function CheckUser($logusername,$logemail)
-{
-$result = $conn->query("SELECT * FROM users WHERE username='". $logusername."' AND password='". $logemail."'");
-return $result;
-}
 
 function insertUser($username, $email, $password){
     

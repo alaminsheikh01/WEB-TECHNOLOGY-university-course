@@ -9,11 +9,13 @@ if (!isset($_SESSION['username'])) {
  
   echo '<a href="./signup.php">SignUp</a>';
   echo '<a href="./login.php">Login</a>';
+  echo '<a href="./showProduct.php">Product</a>';
   
 }else{
   echo '<a href="./welcome.php">Dashboard</a>';
   echo '<a href="./profile.php">Profile</a>';
   echo '<a href="./partials/logout.php">Logout</a>';
+  echo '<a href="./showProduct.php">Product</a>';
   
 }
 ?>
