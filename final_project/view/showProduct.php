@@ -1,9 +1,9 @@
 <?php 
 	session_start();
     require "../model/Connect.php";
-	// if (isset($_SESSION['username'])) {
-	// 	header("Location: welcome.php");
-	// }
+	if (isset($_SESSION['username'])) {
+		header("Location: welcome.php");
+	}
 ?>
 <?php include "./partials/_nav.php";?>
 

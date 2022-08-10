@@ -15,7 +15,6 @@ if (!isset($_SESSION['username'])) {
   echo '<a href="./welcome.php">Dashboard</a>';
   echo '<a href="./profile.php">Profile</a>';
   echo '<a href="./partials/logout.php">Logout</a>';
-  echo '<a href="./showProduct.php">Product</a>';
   
 }
 ?>

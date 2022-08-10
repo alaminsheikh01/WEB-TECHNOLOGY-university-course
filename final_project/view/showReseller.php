@@ -35,7 +35,7 @@
 
 <!-- write your code here  -->
 
-<h2>List of Customer </h2>
+<h2>List of Reseller </h2>
 <a href="./createReseller.php" role="button">New Reseller</a>
 <br><br><br>
 
